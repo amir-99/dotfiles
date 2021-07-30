@@ -1,0 +1,5 @@
+# clangd 12 path
+export PATH="/home/amir/.local/sources/clangd/clangd_12.0.0/bin:${PATH}"
+
+# local bin
+export PATH="/home/amir/.local/bin:${PATH}"

@@ -1,0 +1,39 @@
+# sudo ( nedde for aliases that need to eork with sudo )
+alias sudo="sudo "
+
+# Apt-Fast
+alias apt="apt-fast"
+
+# NeoVim
+alias v=nvim
+
+#list
+alias ls="ls --group-directories-first --color=auto"
+alias la="ls --group-directories-first --color=auto -l -a"
+alias l="ls --group-directories-first --color=auto -a"
+alias ll="ls --group-directories-first --color=auto -l"
+
+# Navigation
+alias ..="cd .."
+
+# tree command
+alias tr="tree -C --dirsfirst"
+alias ta="tree -C --dirsfirst -a"
+
+# Color
+alias dir="dir --color=auto"
+alias vdir="vdir --color=auto"
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
+
+# Suffix 
+alias -s txt="nvim"
+alias -s vim="nvim"
+#alias -s py="nvim"
+alias -s json="nvim"
+#alias -s sh="nvim"
+
+# Python
+alias pyt="python3"
+

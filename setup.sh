@@ -6,7 +6,7 @@ dotdir="$PWD"
 
 [ -d "${HOME}/.local" ] || { mkdir "${HOME}/.local" && chmod u+rw -R "${HOME}/.local"; }
 # get pl10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${HOME}/.local/powerlevel10k
+[ -d "${HOME}/.local/powerlevel10k" ] || git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${HOME}/.local/powerlevel10k
 ln -s "${dotdir}/zshd/.zshrc" "${HOME}/.zshrc"
 [ -e "${HOME}/.cache/zshhistory" ] || { touch "${HOME}/.cache/zshhistory" && chmod u+rw "${HOME}/.cache/zshhistory"; }
 

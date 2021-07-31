@@ -8,7 +8,7 @@ echo "installing packages ..."
 
 for package in $package_list;do
   echo "installing ${package} ..."
-  apt install $package > /dev/null && echo "installed ${package}" || echo "failed to install ${package}"
+  apt install $package -y && echo "installed ${package}" || echo "failed to install ${package}"
 done
 
 echo "install nvim 5"

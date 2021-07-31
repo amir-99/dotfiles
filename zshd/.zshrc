@@ -21,14 +21,18 @@ source ~/.local/dotfiles/env_vars
 # PATH var update
 source ~/.local/dotfiles/path_bin
 
-# Other 
-source ~/.local/opt/zsh/conf.zsh
-
 # History
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.cache/zshhistory
 setopt appendhistory
+
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)               # Include hidden files.
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

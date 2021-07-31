@@ -13,7 +13,7 @@ done
 
 echo "install nvim 5"
 mkdir -p /opt/sources/nvim
-wget -O /opt/sources/nvim/nvim.appimage https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage && cp /opt/sources/nvim/nvim.appimage /usr/bin/nvim && echo "installe nvim" || echo "failed to install nvim"
+wget -O /opt/sources/nvim/nvim.appimage https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage && chmod a+rx /opt/sources/nvim/nvim.appimag && cp /opt/sources/nvim/nvim.appimage /usr/bin/nvim && chmod a+rx /usr/bin/nvim && echo "installe nvim" || echo "failed to install nvim"
 
 echo "done"
 exit 0

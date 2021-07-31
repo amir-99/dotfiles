@@ -23,5 +23,5 @@ ln -s "${dotdir}/coc-settings.json" "${nvimdir}/coc-settings.json"
 ln -s "${dotdir}/plug.vim" "${nvimdir}/vimplug/plug.vim"
 ln -s "${dotdir}/floaterm.vim" "${nvimdir}/vimplug/plug-conf/floaterm.vim"
 ln -s "${dotdir}/coc.vim" "${nvimdir}/vimplug/plug-conf/floaterm.vim"
-ln -s "${dotdir}/NERDTree.vim" "${nvimdir}/vimplug/pulg-conf/NERTree.vim"
+ln -s "${dotdir}/NERDTree.vim" "${nvimdir}/vimplug/pulg-conf/NERDTree.vim"
 

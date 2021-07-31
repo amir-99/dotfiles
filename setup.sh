@@ -11,7 +11,7 @@ ln -s "${dotdir}/zshd/.zshrc" "${HOME}/.zshrc"
 [ -e "${HOME}/.cache/zshhistory" ] || { touch "${HOME}/.cache/zshhistory" && chmod u+rw "${HOME}/.cache/zshhistory"; }
 
 # setup neovim
-nvimdir="${HOMW}/.config/nvim"
+nvimdir="${HOME}/.config/nvim"
 [ -d "${nvimdir}" ] || { mkdir -p "${nvimdir}/autoload" && chmod u+rw -R "${nvimdir}"; }
 [ -d "${nvimdir}/vimplug/plug-conf"] || mkdir -p "${nvimdir}/vimplug/plug-conf"
 curl -flo "${nvimdir}/autoload/plug.vim" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

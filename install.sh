@@ -12,7 +12,7 @@ for package in $package_list;do
 done
 
 echo "install nvim 5"
-curl -flo ~/.local/sources/nvim https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage && cp ~/.local/sources/nvim/nvim.appimage /usr/bin/nvim && echo "installe nvim" || echo "failed to install nvim"
+curl -flo /opt/sources/nvim https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage && cp /opt/sources/nvim/nvim.appimage /usr/bin/nvim && echo "installe nvim" || echo "failed to install nvim"
 
 echo "done"
 exit 0

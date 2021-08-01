@@ -13,9 +13,6 @@ alias la="ls --group-directories-first --color=auto -l -a"
 alias l="ls --group-directories-first --color=auto -a"
 alias ll="ls --group-directories-first --color=auto -l"
 
-# Navigation
-alias ..="cd .."
-
 # tree command
 alias tr="tree -C --dirsfirst"
 alias ta="tree -C --dirsfirst -a"

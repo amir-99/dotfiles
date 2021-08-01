@@ -1,0 +1,28 @@
+
+# add line numbers
+set linenumbers
+
+# indentation
+set autoindent
+set atblanks
+
+# smooth scrolling
+set smooth
+
+# enable mouse functionality
+set mouse
+
+# tab size
+set tabsize 4
+
+# coloring
+set titlecolor blue,black
+set numbercolor blue
+set statuscolor blue
+set keycolor blue
+set functioncolor yellow
+
+# enable backup
+set backupdir ~/nano/nano_backups
+
+include /usr/share/nano/*.nanorc

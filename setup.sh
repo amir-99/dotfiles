@@ -23,4 +23,10 @@ ln -s -f "${dotdir}/nvimd/coc-settings.json" "${nvimdir}/coc-settings.json"
 
 echo "nvim setup complete"
 
+# Other
+#   nanorc
+ln -s -f "${PWD}/.nanorc" "${HOME}/.nanorc" && echo "added nanorc"
+#   bashrc
+ln -s -f "${PWD}/.bashrc" "${HOME}/.bashrc" && echo "added bashrc"
+
 exit 0 

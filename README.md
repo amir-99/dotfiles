@@ -1,46 +1,80 @@
+
 # Dotfiles
+
 ## My personal dotfiles for debian linux
+
 ### setup zsh with p10k and neovim for dev
-#### __includes__:
 
-  * __ZSH__
-    * rc
-    * aliases
-    * env
-    * path
+#### __includes:__
 
-  * __Neovim__
-    * init
-    * conf
-    * vim-plug
-    * plugins configuration
+* __ZSH__
+  * rc
+  * aliases
+  * env
+  * path
 
-  * __Bash__
-    * simple rc file ( no personilation and not included in scripts)
+* __Neovim__
+  * init
+  * conf
+  * vim-plug
+  * plugins configuration
 
-  * __Scripts__
-    * install requirements and and set them up
+* __Othet__
+  * simple rc files for nano and bash
+
+* __Scripts__
+  * install requirements and and set them up
 
 ___
-#### __Installation__:
+
+## __Requirements__ that are not covesrd in install.sh
+
+* [clangd](https://releases.llvm.org/9.0.0/tools/clang/tools/extra/docs/clangd/Installation.html)
+* [Nodejs](https://nodejs.org/en/download/) > v.12
+  
+___
+
+### __Installation:__
+
 #### Writen for Debian 10 Buster
-  * __1  Det the files:__ 
+
+* __1  Det the files:__
+  
   ```bash
   git clone https://github.com/amir-99/dotfiles ~/.local/dotfiles
   ```
-  * __2 Change shell permissions:__
+
+* __2 Change shell permissions:__
+  
   ```bash
   chmod u+x ~/.local/dotfiles/*.sh
   ```
-  * __3 Install requirements__
+
+* __3 Install requirements__
+  
   ```bash
   ~/.local/dotfiles/install.sh
   ```
-  * __4 Setup the dotfiles__
+
+* __4 Setup the dotfiles__
+  
   ```bash
   ~/.local/dotfiles/setup.sh
   ```
-  * __5 Change shell run:__
-  ```
+
+* __5 Change shell run:__
+  
+  ```bash
   chsh $USER
   ```
+
+* __6 Install coc extensions__
+
+open nvim and tupe this command
+  
+  ```vim
+
+:CocInstall coc-sh coc-python coc-json coc-yaml coc-clangd coc-markdownlinting
+
+  ```
+  

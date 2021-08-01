@@ -21,6 +21,9 @@ source ~/.local/dotfiles/env_vars
 # PATH var update
 source ~/.local/dotfiles/path_bin
 
+# Functions
+source ~/.local/dotfiles/zshd/functions.zsh
+
 # History
 HISTSIZE=10000
 SAVEHIST=10000

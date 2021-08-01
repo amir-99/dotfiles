@@ -37,3 +37,5 @@ alias -s json="nvim"
 # Python
 alias pyt="python3"
 
+# Ranger Function
+alias rd="ranger-cd"

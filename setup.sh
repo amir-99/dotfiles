@@ -19,13 +19,7 @@ nvimdir="${HOME}/.config/nvim"
 [ -e "${nvimdir}/autoload/plug.vim" ] || curl -flo "${nvimdir}/autoload/plug.vim" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ln -s -f "${dotdir}/nvimd/init.vim" "${nvimdir}/init.vim"
-ln -s -f "${dotdir}/nvimd/conf.vim" "${nvimdir}/conf.vim"
-ln -s -f "${dotdir}/nvimd/keybindings.vim" "${nvimdir}/keybindings.vim"
 ln -s -f "${dotdir}/nvimd/coc-settings.json" "${nvimdir}/coc-settings.json"
-ln -s -f "${dotdir}/nvimd/plug.vim" "${nvimdir}/vimplug/plug.vim"
-ln -s -f "${dotdir}/nvimd/floaterm.vim" "${nvimdir}/vimplug/plug-conf/floaterm.vim"
-ln -s -f "${dotdir}/nvimd/coc.vim" "${nvimdir}/vimplug/plug-conf/floaterm.vim"
-ln -s -f "${dotdir}/nvimd/NERDTree.vim" "${nvimdir}/vimplug/plug-conf/NERDTree.vim"
 
 echo "nvim setup complete"
 

@@ -1,5 +1,5 @@
 {
- "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python", "sh"],
+ "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python", "sh", "markdown", "yaml"],
 
   // python config
   "python.linting.enabled": true,
@@ -11,7 +11,17 @@
  
   // shell language server
   "sh.enable": true,
+
+  // json
+  "json.enable": true,
+
+  // markdownlint
+  "markdownlint.onChange": true,
+  "markdownlint.onOpen": true,
   
+  // yaml
+  "yaml.format.enable": true,
+
   "snippets.ultisnips.directories":
   [
     "UltiSnips",

@@ -1,5 +1,5 @@
 # use ranger for navigation 
-#	alias added in .alias file
+# alias added in .alias file
 function ranger-cd {
     # create a temp file and store the name
     tempfile="$(mktemp -t tmp.XXXXXX)"
@@ -15,7 +15,7 @@ function ranger-cd {
         # change directory to the path in the temp file
         cd -- "$(cat "$tempfile")"
     fi
-    
+
    # its not super necessary to have this line for deleting
    # the temp file since Linux should handle it on the next
    # boot

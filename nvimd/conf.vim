@@ -8,7 +8,7 @@ set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
 set cmdheight=2                         " More space for displaying messages
-set iskeyword+=-                      	" treat dash separated words as a word text object"
+set iskeyword+=-                        " treat dash separated words as a word text object"
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
@@ -26,4 +26,5 @@ set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set formatoptions-=cro                  " Stop newline continution of comments
-set clipboard=unnamedplus   
+set clipboard=unnamedplus
+set listchars+=trail:◦                  " Show trailing white spaces as set (◦)

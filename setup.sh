@@ -29,4 +29,4 @@ ln -s -f "${PWD}/.nanorc" "${HOME}/.nanorc" && echo "added nanorc"
 #   bashrc
 ln -s -f "${PWD}/.bashrc" "${HOME}/.bashrc" && echo "added bashrc"
 
-exit 0 
+exit 0

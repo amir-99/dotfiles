@@ -4,11 +4,11 @@
   // python config
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-  
+
   // C by clangd
   "clangd.enabled": true,
   "clangd.path": "/home/amir/.local/sources/clangd/clangd_12.0.0/bin/clangd",
- 
+
   // shell language server
   "sh.enable": true,
 
@@ -18,7 +18,7 @@
   // markdownlint
   "markdownlint.onChange": true,
   "markdownlint.onOpen": true,
-  
+
   // yaml
   "yaml.format.enable": true,
 
@@ -28,4 +28,4 @@
     "~/.config/nvim/utils/snips"
   ]
 
-} 
+}

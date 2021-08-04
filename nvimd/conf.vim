@@ -20,6 +20,7 @@ set smarttab                            " Makes tabbing smarter will realize you
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set number                              " Line numbers
+set relativenumber                      " Relative line numbers
 set showtabline=2                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc

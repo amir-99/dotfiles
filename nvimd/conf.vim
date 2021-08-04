@@ -35,4 +35,4 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Color Scheme | dependent on 'NLKNguyen/papercolor-theme' | look at plugin
 set background=dark
-source PaperColor
+colorscheme PaperColor

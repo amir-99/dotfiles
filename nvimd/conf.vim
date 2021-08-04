@@ -28,4 +28,11 @@ set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus
-set listchars+=trail:◦                  " Show trailing white spaces as set (◦)
+
+" trailing white spaces
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace /\s\+$/
+
+" Color Scheme | dependent on 'NLKNguyen/papercolor-theme' | look at plugin
+set background=dark
+source PaperColor

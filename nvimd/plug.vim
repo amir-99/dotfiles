@@ -34,4 +34,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Stable version of coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+    " better commentting
+    Plug 'tpope/vim-commentary'
+
 call plug#end()

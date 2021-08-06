@@ -17,3 +17,5 @@ source ~/.local/dotfiles/nvimd/floaterm.vim
   autocmd! bufwritepost ~/.local/dotfiles/nvimd/floaterm.vim source ~/.local/dotfiles/nvimd/floaterm.vim
 source ~/.local/dotfiles/nvimd/NERDTree.vim
   autocmd! bufwritepost ~/.local/dotfiles/nvimd/NERDTree.vim source ~/.local/dotfiles/nvimd/NERDTree.vim
+source ~/.local/dotfiles/nvimd/vim-commentary.vim
+  autocmd! bufwritepost ~/.local/dotfiles/nvimd/vim-commentary.vim source ~/.local/dotfiles/nvimd/vim-commentary.vim

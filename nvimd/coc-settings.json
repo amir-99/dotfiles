@@ -7,7 +7,6 @@
 
   // C by clangd
   "clangd.enabled": true,
-  "clangd.path": "/home/amir/.local/sources/clangd/clangd_12.0.0/bin/clangd",
 
   // shell language server
   "sh.enable": true,

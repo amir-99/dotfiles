@@ -27,9 +27,8 @@
 
 ___
 
-## __Requirements__ that are not covesrd in install.sh
+## __Requirements__ that are not coverd in install.sh
 
-* [clangd](https://releases.llvm.org/9.0.0/tools/clang/tools/extra/docs/clangd/Installation.html)
 * [Nodejs](https://nodejs.org/en/download/) > v.12
   
 ___

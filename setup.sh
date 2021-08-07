@@ -2,7 +2,7 @@
 
 ## setup zsh
 
-dotdir="$PWD"
+dotdir="$(dirname $0)"
 
 [ -d "${HOME}/.local" ] || { mkdir "${HOME}/.local" && chmod u+rw -R "${HOME}/.local"; }
 # get pl10k
@@ -27,8 +27,13 @@ echo "nvim setup complete"
 
 # Other
 #   nanorc
-ln -s -f "${PWD}/.nanorc" "${HOME}/.nanorc" && echo "added nanorc"
+ln -s -f "${dotdir}/.nanorc" "${HOME}/.nanorc" && echo "added nanorc"
 #   bashrc
-ln -s -f "${PWD}/.bashrc" "${HOME}/.bashrc" && echo "added bashrc"
+ln -s -f "${dotdir}/.bashrc" "${HOME}/.bashrc" && echo "added bashrc"
+
+fonts_dir="${HOME}/.fonts"
+cp "${base_dir}/MesloLGS NF Bold.ttf" "${fonts_dir}"
+cp "${base_dir}/MesloLGS NF Italic.ttf" "${fonts_dir}"
+cp "${base_dir}/MesloLGS NF Regular.ttf" "${fonts_dir}"
 
 exit 0

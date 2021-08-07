@@ -24,7 +24,4 @@ echo "Failed to install ${failed_packeges}\nTry installing the manually or rerun
 echo "install nodejs for coc manually."
 echo "done"
 
-# add fonts
-cp "${PWD}/fonts/*" "/usr/share/fonts"
-
 exit 0

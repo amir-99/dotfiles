@@ -21,7 +21,8 @@ nvimdir="${HOME}/.config/nvim"
 
 ln -s -f "${dotdir}/nvimd/init.vim" "${nvimdir}/init.vim"
 ln -s -f "${dotdir}/nvimd/coc-settings.json" "${nvimdir}/coc-settings.json"
-ln -s -f "${dotdir}/nvimd/PaperColor.vim" "${nvimdir}/colors/PaperColor.vim"
+ln -s -f "${dotdir}/nvimd/color_PaperColor.vim" "${nvimdir}/colors/PaperColor.vim"
+ln -s -f "${dotdir}/nvimd/color_gruvbox.vim" "${nvimdir}/colors/gruvbox.vim"
 
 echo "nvim setup complete"
 

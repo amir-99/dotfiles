@@ -35,7 +35,6 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Color Scheme | dependent on 'NLKNguyen/papercolor-theme' | look at plugin
 set background=dark
-c_s='gruvbox'
-colorscheme '${c_s}'
-# lightline colorscheme
-source '${HOME}/.local/dotfiles/nvimd/color_lightline_${c_s}.vim'
+colorscheme gruvbox
+" lightline colorscheme
+source ${HOME}/.local/dotfiles/nvimd/color_lightline_gruvbox.vim

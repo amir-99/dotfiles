@@ -2,7 +2,7 @@
 
 ## setup zsh
 
-dotdir="$(dirname $0)"
+dotdir="/home/${USER}/.local/dotfiles"
 
 [ -d "${HOME}/.local" ] || { mkdir "${HOME}/.local" && chmod u+rw -R "${HOME}/.local"; }
 # get pl10k

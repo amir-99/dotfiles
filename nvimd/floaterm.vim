@@ -1,7 +1,7 @@
 let g:floaterm_keymap_toggle = '<C-t>'
-let g:floaterm_keymap_next   = '<C-l>'
-let g:floaterm_keymap_prev   = '<C-k>'
-let g:floaterm_keymap_new    = '<C-o>'
+let g:floaterm_keymap_next   = '<A-C-l>'
+let g:floaterm_keymap_prev   = '<A-C-k>'
+let g:floaterm_keymap_new    = '<A-C-o>'
 
 " Floaterm
 "let g:floaterm_gitcommit='floaterm'

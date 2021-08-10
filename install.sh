@@ -19,7 +19,7 @@ echo "configuring llvm toolchain repo"
 package_list="apt-fast git curl wget tree htop python3
               python3-pip zsh zsh-syntax-highlighting
               zsh-autosuggestions ranger build-essential
-              gdb clang-tools-14"
+              gdb clang-tools-13 clangd-13"
 apt update || { echo "failed to update the package list"; exit 1; }
 
 echo "installing packages ..."

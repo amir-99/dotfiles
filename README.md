@@ -14,12 +14,11 @@
   * path
 
 * __Neovim__
-  * init
-  * conf
-  * vim-plug
-  * plugins configuration
+  * configuration
+  * [Vim-Plug](https://github.com/junegunn/vim-plug)
+  * and plugins configuration
 
-* __Othet__
+* __Other__
   * simple rc files for nano and bash
 
 * __Scripts__
@@ -37,7 +36,7 @@ ___
 
 #### Writen for Debian 10 Buster
 
-* __1  Det the files:__
+* __1  Get the files to the specifies dir:__
   
   ```bash
   git clone https://github.com/amir-99/dotfiles ~/.local/dotfiles
@@ -61,7 +60,7 @@ ___
   ~/.local/dotfiles/setup.sh
   ```
 
-* __5 Change shell run:__
+* __5 Change shell:__
   
   ```bash
   chsh $USER

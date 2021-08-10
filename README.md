@@ -69,11 +69,10 @@ ___
 
 * __6 Install coc extensions__
 
-open nvim and tupe this command
+open nvim and type this command
   
   ```vim
 
 :CocInstall coc-sh coc-python coc-json coc-yaml coc-clangd coc-markdownlinting
 
   ```
-  

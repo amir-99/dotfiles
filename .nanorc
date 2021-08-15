@@ -21,8 +21,3 @@ set numbercolor blue
 set statuscolor blue
 set keycolor blue
 set functioncolor yellow
-
-# enable backup
-set backupdir ~/nano/nano_backups
-
-include /usr/share/nano/*.nanorc

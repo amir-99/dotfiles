@@ -38,42 +38,44 @@ ___
 
 * __1  Get the files to the specifies dir:__
   
+  for Debian Buster
+
   ```bash
-  git clone https://github.com/amir-99/dotfiles ~/.local/dotfiles
+  git clone -b main https://github.com/amir-99/dotfiles ~/.local/dotfiles
   ```
 
-* __2 Chose your branch__
+  for Debian bullseye
 
-    for buster remain on main but for bullseye go to bullseye brand with this command:
-    ```bash
-    git checkout bullseye
-    ```
-  
-* __3 Change shell permissions:__
+  ```bash
+  git clone -b bullseye https://github.com/amir-99/dotfiles ~/.local/dotfiles
+  ```
+
+* __2 Change shell permissions:__
   
   ```bash
   chmod u+x ~/.local/dotfiles/*.sh
   ```
 
-* __4 Install requirements__
+* __3 Install requirements__
   
   ```bash
   ~/.local/dotfiles/install.sh
   ```
 
-* __5 Setup the dotfiles__
+* __4 Setup the dotfiles__
   
   ```bash
   ~/.local/dotfiles/setup.sh
   ```
 
-* __6 Change shell:__
+* __5 Change shell:__
   
   ```bash
   chsh $USER
   ```
 
-* __7 Create a working branch__
+* __6 Create a working branch__
+  
   ```bash
   git branch working
   git checkout -b working
@@ -81,10 +83,8 @@ ___
   
 * __7 Install coc extensions__
 
-open nvim and type this command
+  open nvim and type this command
   
   ```vim
-
-:CocInstall coc-sh coc-python coc-json coc-yaml coc-clangd coc-markdownlinting
-
+  :CocInstall coc-sh coc-python coc-json coc-yaml coc-clangd coc-markdownlinting
   ```

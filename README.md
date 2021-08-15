@@ -44,7 +44,7 @@ ___
 
 * __2 Chose your branch__
 
-    for buster remain on main but for bullseye go to bullseye brand with this command:
+    for buster remain on main but for bullseye go to bullseye branch with this command:
     ```bash
     git checkout bullseye
     ```

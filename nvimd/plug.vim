@@ -37,4 +37,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " better commentting
     Plug 'tpope/vim-commentary'
 
+    " display color codes
+    Plug 'chrisbra/Colorizer'
+
 call plug#end()

@@ -40,4 +40,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " display color codes
     Plug 'chrisbra/Colorizer'
 
+    " multiple cursors
+    Plug 'terryma/vim-multiple-cursors'
+
 call plug#end()

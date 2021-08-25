@@ -16,7 +16,7 @@ set t_Co=256                            " Support 256 colors
 set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
-" set expandtab                           " Converts tabs to spaces | messes with make file
+set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set number                              " Line numbers
@@ -28,8 +28,11 @@ set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus
+set termguicolors                       " Use full range of colors
+set scrolloff=5
 
-" trailing white spaces
+set listchars=tab:>>
+"trailing white spaces
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 

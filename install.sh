@@ -1,5 +1,22 @@
 #!/usr/bin/sudo sh
 
+# set version specefic vars
+
+[ -f /etc/os-release ] &&{
+  . /etc/os-release &&
+  [ "${VERSION_ID}" -eq "11" ] &&{
+    release_name="bullseye";
+  } || {
+    release_name="buster";
+  };
+} || {
+  # default assumption
+  release_name="buster";
+}
+
+echo " ***** using debian ${release_name} version:${VERSION_ID} *****"
+
+
 # install minimum requirements
 
 # apt-fast repo
@@ -11,8 +28,8 @@ echo "configuring apt-fast repo"
 
 # llvm repo
 echo "configuring llvm toolchain repo"
-[ -e "/etc/apt/sources.list.d/llvm-toolchain-buster-13.list" ] || {
-      echo "deb http://apt.llvm.org/buster/ llvm-toolchain-buster-13 main\ndeb-src http://apt.llvm.org/buster/ llvm-toolchain-buster-13 main" > /etc/apt/sources.list.d/llvm-toolchain-buster-13.list &&
+[ -e "/etc/apt/sources.list.d/llvm-toolchain-${release_name}-13.list" ] || {
+  echo "deb http://apt.llvm.org/${release_name}/ llvm-toolchain-${release_name}-13 main\ndeb-src http://apt.llvm.org/${release_name}/ llvm-toolchain-${release_name}-13 main" > "/etc/apt/sources.list.d/llvm-toolchain-${release_name}-13.list" &&
       wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - &&
       echo "done"; }
 

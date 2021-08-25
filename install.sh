@@ -36,7 +36,7 @@ echo "configuring llvm toolchain repo"
 package_list="apt-fast git curl wget tree htop python3
               python3-pip zsh zsh-syntax-highlighting
               zsh-autosuggestions ranger build-essential
-              gdb clang-tools-14"
+              gdb clang-tools-13 clangd-13"
 apt update || { echo "failed to update the package list"; exit 1; }
 
 echo "installing packages ..."
@@ -50,15 +50,16 @@ done
 
 echo "install nvim 5"
 [ -e /usr/bin/nvim ] || {
-                          mkdir -p /opt/sources/nvim &&
+                            { [ -d /opt/sources/nvim ] ||
+                              mkdir -p /opt/sources/nvim ; }
                           wget -O /opt/sources/nvim/nvim.appimage https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage &&
-                          chmod a+rx /opt/sources/nvim/nvim.appimag &&
+                          chmod a+rx /opt/sources/nvim/nvim.appimage &&
                           cp /opt/sources/nvim/nvim.appimage /usr/bin/nvim &&
                           chmod a+rx /usr/bin/nvim &&
-                          echo "installed nvim" ||
-                          echo "failed to install nvim"; }
+                          echo "installed neovim" ||
+                          failed_packeges="${failed_packeges} neovim"; }
 
-echo "Failed to install ${failed_packeges}\nTry installing the manually or rerun the script"
+[ -z "${failed_packeges}" ] || echo "Failed to install ${failed_packeges}\nTry installing the manually or rerun the script"
 echo "install nodejs for coc manually."
 echo "done"
 

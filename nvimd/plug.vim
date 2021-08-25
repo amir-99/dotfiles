@@ -37,4 +37,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " better commentting
     Plug 'tpope/vim-commentary'
 
+    " display color codes
+    Plug 'chrisbra/Colorizer'
+
+    " multiple cursors
+    Plug 'terryma/vim-multiple-cursors'
+
+    " jupyter-vim
+    Plug 'wmvanvliet/jupyter-vim'
+
 call plug#end()

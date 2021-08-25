@@ -14,12 +14,11 @@
   * path
 
 * __Neovim__
-  * init
-  * conf
-  * vim-plug
-  * plugins configuration
+  * configuration
+  * [Vim-Plug](https://github.com/junegunn/vim-plug)
+  * and plugins configuration
 
-* __Othet__
+* __Other__
   * simple rc files for nano and bash
 
 * __Scripts__
@@ -37,10 +36,18 @@ ___
 
 #### Writen for Debian 10 Buster
 
-* __1  Det the files:__
+* __1  Get the files to the specifies dir:__
   
+  for Debian Buster
+
   ```bash
-  git clone https://github.com/amir-99/dotfiles ~/.local/dotfiles
+  git clone -b main https://github.com/amir-99/dotfiles ~/.local/dotfiles
+  ```
+
+  for Debian bullseye
+
+  ```bash
+  git clone -b bullseye https://github.com/amir-99/dotfiles ~/.local/dotfiles
   ```
 
 * __2 Change shell permissions:__
@@ -61,18 +68,23 @@ ___
   ~/.local/dotfiles/setup.sh
   ```
 
-* __5 Change shell run:__
+* __5 Change shell:__
   
   ```bash
   chsh $USER
   ```
 
-* __6 Install coc extensions__
+* __6 Create a working branch__
+  
+  ```bash
+  git branch working
+  git checkout -b working
+  ```
+  
+* __7 Install coc extensions__
 
-open nvim and type this command
+  open nvim and type this command
   
   ```vim
-
-:CocInstall coc-sh coc-python coc-json coc-yaml coc-clangd coc-markdownlinting
-
+  :CocInstall coc-sh coc-python coc-json coc-yaml coc-clangd coc-markdownlinting
   ```

@@ -21,3 +21,5 @@ source ~/.local/dotfiles/nvimd/plug_vim-commentary.vim
   autocmd! bufwritepost ~/.local/dotfiles/nvimd/plug_vim-commentary.vim source ~/.local/dotfiles/nvimd/plug_vim-commentary.vim
 source ~/.local/dotfiles/nvimd/plug_colorizer.vim
   autocmd! bufwritepost ~/.local/dotfiles/nvimd/plug_colorizer.vim source ~/.local/dotfiles/nvimd/plug_colorizer.vim
+source ~/.local/dotfiles/nvimd/plug_jupyter-vim.vim
+  autocmd! bufwritepost ~/.local/dotfiles/nvimd/plug_jupyter-vim.vim source ~/.local/dotfiles/nvimd/plug_jupyter-vim.vim

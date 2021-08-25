@@ -43,4 +43,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " multiple cursors
     Plug 'terryma/vim-multiple-cursors'
 
+    " jupyter-vim
+    Plug 'wmvanvliet/jupyter-vim'
+
 call plug#end()

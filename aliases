@@ -9,9 +9,9 @@ alias v=nvim
 
 #list
 alias ls="ls --group-directories-first --color=auto"
-alias la="ls --group-directories-first --color=auto -l -a"
+alias la="ls --group-directories-first --color=auto -lah"
 alias l="ls --group-directories-first --color=auto -a"
-alias ll="ls --group-directories-first --color=auto -l"
+alias ll="ls --group-directories-first --color=auto -lh"
 
 # tree command
 alias tr="tree -C --dirsfirst"

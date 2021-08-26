@@ -39,5 +39,8 @@ _comp_options+=(globdots)               # Include hidden files.
 # auto cd
 setopt auto_cd
 
+# enable vim mode
+bindkey -v
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

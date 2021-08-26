@@ -38,16 +38,8 @@ ___
 
 * __1  Get the files to the specifies dir:__
   
-  for Debian Buster
-
   ```bash
   git clone -b main https://github.com/amir-99/dotfiles ~/.local/dotfiles
-  ```
-
-  for Debian bullseye
-
-  ```bash
-  git clone -b bullseye https://github.com/amir-99/dotfiles ~/.local/dotfiles
   ```
 
 * __2 Change shell permissions:__
@@ -86,5 +78,5 @@ ___
   open nvim and type this command
   
   ```vim
-  :CocInstall coc-sh coc-python coc-json coc-yaml coc-clangd coc-markdownlinting
+  :CocInstall coc-sh coc-pyright coc-json coc-yaml coc-clangd coc-markdownlinting
   ```

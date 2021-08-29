@@ -46,4 +46,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " jupyter-vim
     Plug 'wmvanvliet/jupyter-vim'
 
+    " GDB Integration
+    Plug 'cpiger/NeoDebug'
+
+    " Window Focus
+    Plug 'szw/vim-maximizer'
+
 call plug#end()

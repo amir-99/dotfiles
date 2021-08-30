@@ -1,6 +1,6 @@
 " set leader key
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
-let g:mapleader="\<Space>"
+let g:mapleader=" "
 
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
@@ -30,6 +30,7 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus
 set termguicolors                       " Use full range of colors
 set scrolloff=5
+set formatoptions-=cro                  " Diasble auto comments
 
 set listchars=tab:>>
 "trailing white spaces

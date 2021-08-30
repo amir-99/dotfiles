@@ -26,12 +26,6 @@
 
 ___
 
-## __Requirements__ that are not coverd in install.sh
-
-* [Nodejs](https://nodejs.org/en/download/) > v.12
-  
-___
-
 ### __Installation:__
 
 #### Writen for Debian 10 Buster

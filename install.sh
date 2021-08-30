@@ -17,6 +17,11 @@
 echo " ***** using debian ${release_name} version:${VERSION_ID} *****"
 
 
+# check for required packages
+dpkg -s gnupg2 wget curl || {
+  echo "*** wget gunpg2 and curl are needed" &&
+  apt install wget curl gnupg2
+}
 # install minimum requirements
 
 # apt-fast repo
@@ -33,10 +38,13 @@ echo "configuring llvm toolchain repo"
       wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - &&
       echo "done"; }
 
+# node repo
+[ -e "/etc/apt/sources.list.d/nodesource.list" ] || curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
+
 package_list="apt-fast git curl wget tree htop python3
               python3-pip zsh zsh-syntax-highlighting
               zsh-autosuggestions ranger build-essential
-              gdb clang-tools-13 clangd-13"
+              gdb clang-tools-13 clangd-13 fuse nodejs"
 apt update || { echo "failed to update the package list"; exit 1; }
 
 echo "installing packages ..."
@@ -60,7 +68,6 @@ echo "install nvim 5"
                           failed_packeges="${failed_packeges} neovim"; }
 
 [ -z "${failed_packeges}" ] || echo "Failed to install ${failed_packeges}\nTry installing the manually or rerun the script"
-echo "install nodejs for coc manually."
 echo "done"
 
 exit 0

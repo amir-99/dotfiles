@@ -1,9 +1,16 @@
 {
- "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "graphql", "html", "yaml",  "json", "python", "sh", "markdown", "yaml"],
+ "coc.preferences.formatOnSaveFiletypes": ["markdown","yaml",  "json", "python", "sh", "markdown"],
 
   // python config
+	"python.venvPath": "~/.venvs",
+	"pyright.enable": true,
+	"pyright.completion.snippetSupport": true,
+	"suggest.enablePreview": true,
   "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
+	"python.linting.pylintEnabled": true,
+	"python.linting.pylintUseMinimalCheckers": false,
+	"python.linting.lintOnSave": true,
+	"python.analysis.useLibraryCodeForTypes": true,
 
   // C by clangd
   "clangd.enabled": true,
@@ -19,12 +26,6 @@
   "markdownlint.onOpen": true,
 
   // yaml
-  "yaml.format.enable": true,
-
-  "snippets.ultisnips.directories":
-  [
-    "UltiSnips",
-    "~/.config/nvim/utils/snips"
-  ]
+  "yaml.format.enable": true
 
 }

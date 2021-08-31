@@ -1,7 +1,5 @@
-" Sourcing config files and auto sourcing them on update
-" Config
-source ~/.local/dotfiles/nvimd/conf.vim
-  autocmd! bufwritepost ~/.local/dotfiles/nvimd/conf.vim source ~/.local/dotfiles/nvimd/conf.vim
+" Auto source this file on change
+autocmd! bufwritepost ~/.local/dotfiles/nvimd/init.vim source ~/.local/dotfiles/nvimd/init.vim
 
 " *** basic config ****
 " set leader key

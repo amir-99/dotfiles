@@ -22,6 +22,8 @@
 "               jupyter-vim
 "               NeoDebug
 "               vim-maximizer
+"               vim-devicons
+"               nerdtree-git-plugin
 " PART F: Plugin Configs:
 "               vim-commentary
 "               NERDTree
@@ -160,6 +162,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'cpiger/NeoDebug'
     " Window Focus
     Plug 'szw/vim-maximizer'
+    " Add Icons
+    Plug 'ryanoasis/vim-devicons'
+    " git integration for NERDTree
+    Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " ***** *****

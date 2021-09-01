@@ -210,9 +210,7 @@ autocmd FileType python nnoremap <buffer> <silent> <localleader>I :PythonImportT
 autocmd FileType python nnoremap <buffer> <silent> <localleader>d :JupyterCd %:p:h<CR>
 " Send a selection of lines
 autocmd FileType python nnoremap <buffer> <silent> <C-x> :JupyterSendCell<CR>
-autocmd FileType python inoremap <buffer> <silent> <C-x> :JupyterSendCell<CR>
 autocmd FileType python nnoremap <buffer> <silent> <C-g> :JupyterSendRange<CR>
-autocmd FileType python inoremap <buffer> <silent> <C-g> :JupyterSendRange<CR>
 autocmd FileType python nmap     <buffer> <silent> <C-A-e> <Plug>JupyterRunTextObj
 autocmd FileType python vmap     <buffer> <silent> <C-A-e> <Plug>JupyterRunVisual
 autocmd FileType python nnoremap <buffer> <silent> <F8>U :JupyterUpdateShell<CR>

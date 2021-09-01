@@ -1,13 +1,52 @@
-" Auto source this file on change
+" init.vim
+" Amir Eghtedar
+
+
+" List:
+" PART A: Autoload
+" PART B: Basic config
+" PART C: Color Settings
+" PART D: Basic Keybindings
+" PART E: Vim Plug:
+"               vim-polyglot
+"               NERDTree
+"               auto-pairs
+"               lightline.vim
+"               vim-gitgutter
+"               vim-fugitive
+"               vim-floaterm
+"               coc.nvim
+"               vim-commentary
+"               Colorizer
+"               vim-multiple-cursors
+"               jupyter-vim
+"               NeoDebug
+"               vim-maximizer
+" PART F: Plugin Configs:
+"               vim-commentary
+"               NERDTree
+"               NeoDebug
+"               jupyter-vim
+"               floaterm
+"               colorizer
+"               coc
+
+" ***** *****
+
+" PART A:
+"      Simple auto load for init.vim on save.
+" auto source this file on change
 autocmd! bufwritepost ~/.local/dotfiles/nvimd/init.vim source ~/.local/dotfiles/nvimd/init.vim
 
-" *** basic config ****
-" set leader key
-set timeoutlen=500       " By default timeoutlen is 1000 ms
-let g:mapleader=" "
+" ***** *****
 
+" PART B:
+"       basic configuration
+set timeoutlen=500       " Shoten time out
+let g:mapleader=","      " set leader kry
 syntax enable            " Enables syntax highlighing
-set hidden               " Required to keep multiple buffers open multiple buffers
+set hidden               " Required to keep multiple buffers open multiple
+                         "                                         buffers
 set encoding=utf-8       " The encoding displayed
 set pumheight=10         " Makes popup menu smaller
 set fileencoding=utf-8   " The encoding written to file
@@ -18,7 +57,8 @@ set splitbelow           " Horizontal splits will automatically be below
 set splitright           " Vertical splits will automatically be to the right
 set t_Co=256             " Support 256 colors
 set tabstop=2            " Insert 2 spaces for a tab
-set shiftwidth=2         " Change the number of space characters inserted for indentation
+set shiftwidth=2         " Change the number of space characters inserted for
+                         "                                        indentation
 set smarttab             " Makes tabbing smarter will realize you have 2 vs 4
 set expandtab            " Converts tabs to spaces
 set smartindent          " Makes indenting smart
@@ -35,29 +75,33 @@ set clipboard=unnamedplus
 set termguicolors        " Use full range of colors
 set scrolloff=10         " Keep 10 lines
 set formatoptions-=cro   " Diasble auto comments
+set listchars=tab:>>     " Show tabs as >> in list mode
 
-set listchars=tab:>>
-"trailing white spaces
+" ***** *****
+
+" PART C:
+"       Color Settings
+" show trailing whith spaces as red rectangles
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
-" Red color for long text
+" Red color for long text fot text longet than 80 chars
 au BufWinEnter * let w:m2=matchadd('WarningMsg', '\%>80v.\+', -1)
-
-" Color Scheme | dependent on 'NLKNguyen/papercolor-theme' | look at plugin
+" select color scheme
 set background=dark
 colorscheme gruvbox
 " lightline colorscheme
 source ${HOME}/.local/dotfiles/nvimd/color_lightline_gruvbox.vim
 
-" **** KeyBindings ****
+" ***** *****
 
-" Quic Save
+" PART D:
+"       Basic Keybindings
+" quic aave
 noremap <A-w> :update<CR>
 inoremap <A-w> <C-O>:update<CR>
-" Split
-"   vertical
+" vertical split
 noremap <A-e> :vsplit<CR>
-"   horrizental
+" horrizental split
 noremap <A-o> :split<CR>
 " toggle hidden chars
 noremap <A-l> :set list!<CR>
@@ -77,18 +121,16 @@ vnoremap < <gv
 " get out of terminal insert
 tnoremap <C-e> <C-Bslash><C-n>
 
-" Plugin Manager
+" ***** *****
 
+" PART E:
+"       Vim Plug config
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
-  "autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
-
 call plug#begin('~/.config/nvim/autoload/plugged')
-
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " File Explorer
@@ -99,7 +141,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'itchyny/lightline.vim'
     " Git diff
     Plug 'airblade/vim-gitgutter'
-    "Plug 'mhinz/vim-signify'
     " Git integration
     Plug 'tpope/vim-fugitive'
     " Floaterm
@@ -119,39 +160,40 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'cpiger/NeoDebug'
     " Window Focus
     Plug 'szw/vim-maximizer'
-
 call plug#end()
 
-" **** plugin config ****
+" ***** *****
 
-" 7 **************************************************
-" vim commantary
+" PART F:
+"       Plugin configurations
+" ----------
+" vim-commantary
 " Coment out a line (default cc command not used!)
- map cc gcc
+ map <Leader>c gcc
 
-" 6 **************************************************
-" NERDTree Toggle
-noremap <C-A-a> :NERDTreeToggle<CR>
+" ----------
+" NERDTree
+noremap <Leader>t :NERDTreeToggle<CR>
 
-" 5 **************************************************
-" Neo Debug
+" ----------
+" NeoDebug
 let g:neodbg_openbreaks_default    = 1               " Open breakpoints window
 let g:neodbg_openstacks_default    = 1               " Open stackframes windowd
 let g:neodbg_openlocals_default    = 1               " Open locals window
 " keymaps
-let g:neodbg_keymap_toggle_breakpoint  = '<A-b>'         " toggle breakpoint on current line
-let g:neodbg_keymap_next               = '<A-d>'        " next
+let g:neodbg_keymap_toggle_breakpoint  = '<Leader>b'         " toggle breakpoint on current line
+let g:neodbg_keymap_next               = '<Leader>n'        " next
 let g:neodbg_keymap_run_to_cursor      = '<C-F10>'      " run to cursor (tb and c)
 let g:neodbg_keymap_jump               = '<C-S-F10>'    " set next statement (tb and jump)
-let g:neodbg_keymap_step_into          = '<A-s>'        " step into
-let g:neodbg_keymap_step_out           = '<C-A-s>'      " setp out
+let g:neodbg_keymap_step_into          = '<Leader>s'        " step into
+let g:neodbg_keymap_step_out           = '<Leader>S'      " setp out
 let g:neodbg_keymap_continue           = '<F5>'         " run or continue
-let g:neodbg_keymap_print_variable     = '<C-P>'        " view variable under the cursor
-let g:neodbg_keymap_stop_debugging     = '<A-t>'        " stop debugging (kill)
+let g:neodbg_keymap_print_variable     = '<Leader>sv'        " view variable under the cursor
+let g:neodbg_keymap_stop_debugging     = '<Leader>tt'        " stop debugging (kill)
 let g:neodbg_keymap_toggle_console_win = '<F6>'         " toggle console window
 let g:neodbg_keymap_terminate_debugger = '<C-C>'        " terminate debugger
 
-" 4 **************************************************
+" ----------
 " jupyter-vim
 " disable default keybindings
 let g:jupyter_mapkeys = 0
@@ -162,7 +204,9 @@ autocmd FileType python nnoremap <buffer> <silent> <localleader>I :PythonImportT
 autocmd FileType python nnoremap <buffer> <silent> <localleader>d :JupyterCd %:p:h<CR>
 " Send a selection of lines
 autocmd FileType python nnoremap <buffer> <silent> <C-x> :JupyterSendCell<CR>
+autocmd FileType python inoremap <buffer> <silent> <C-x> :JupyterSendCell<CR>
 autocmd FileType python nnoremap <buffer> <silent> <C-g> :JupyterSendRange<CR>
+autocmd FileType python inoremap <buffer> <silent> <C-g> :JupyterSendRange<CR>
 autocmd FileType python nmap     <buffer> <silent> <C-A-e> <Plug>JupyterRunTextObj
 autocmd FileType python vmap     <buffer> <silent> <C-A-e> <Plug>JupyterRunVisual
 autocmd FileType python nnoremap <buffer> <silent> <F8>U :JupyterUpdateShell<CR>
@@ -181,23 +225,23 @@ function StartJupyter()
 	:wincmd h
 	:JupyterConnect
 endfunction
-autocmd FileType python nnoremap <C-A-r> :call StartJupyter()<CR>
-autocmd FileType python nnoremap <C-A-t> :call QuitJupyter()<CR>
+autocmd FileType python nnoremap <Leader>r :call StartJupyter()<CR>
+autocmd FileType python nnoremap <Leader>f :call QuitJupyter()<CR>
 
-" 3 **************************************************
+" ----------
 " Floaterm
 let g:floaterm_keymap_toggle = '<C-t>'
 let g:floaterm_keymap_next   = '<A-C-l>'
 let g:floaterm_keymap_prev   = '<A-C-k>'
 let g:floaterm_keymap_new    = '<A-C-o>'
 
-" 2 **************************************************
+" ----------
 " Colorizer Plugin
 " Show Color on Color names and Color codes
 " example : red #125e36
-noremap <C-A-s> :ColorToggle<CR>
+noremap <Leader>sc :ColorToggle<CR>
 
-" 1 **************************************************
+" ----------
 " coc plugin
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -323,4 +367,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-

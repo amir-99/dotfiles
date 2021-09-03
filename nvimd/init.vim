@@ -98,9 +98,11 @@ source ${HOME}/.local/dotfiles/nvimd/color_lightline_gruvbox.vim
 
 " PART D:
 "       Basic Keybindings
-" quic aave
+" quic save
 noremap <A-w> :update<CR>
 inoremap <A-w> <C-O>:update<CR>
+" force quit all
+noremap <Leader>qq :qa!<CR>
 " vertical split
 noremap <A-e> :vsplit<CR>
 " horrizental split

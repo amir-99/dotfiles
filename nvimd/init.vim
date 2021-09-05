@@ -75,7 +75,7 @@ set updatetime=300       " Faster completion
 set formatoptions-=cro   " Stop newline continution of comments
 set clipboard=unnamedplus
 set termguicolors        " Use full range of colors
-set scrolloff=10         " Keep 10 lines
+set scrolloff=3          " Keep 10 lines
 set formatoptions-=cro   " Diasble auto comments
 set listchars=tab:>>     " Show tabs as >> in list mode
 
@@ -93,6 +93,8 @@ set background=dark
 colorscheme gruvbox
 " lightline colorscheme
 source ${HOME}/.local/dotfiles/nvimd/color_lightline_gruvbox.vim
+" Diasble color scheme background
+hi Normal guibg=NONE ctermbg=NONE
 
 " ***** *****
 

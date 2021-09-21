@@ -24,7 +24,10 @@
 "               vim-maximizer
 "               vim-devicons
 "               nerdtree-git-plugin
+"               ctrlp.vim
+"               vim-startify
 " PART F: Plugin Configs:
+"               ctrlp.vim
 "               vim-commentary
 "               NERDTree
 "               NeoDebug
@@ -32,6 +35,8 @@
 "               floaterm
 "               colorizer
 "               coc
+" PART G: Custom actions
+"               c/cpp make and run
 
 " ***** *****
 
@@ -170,12 +175,24 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ryanoasis/vim-devicons'
     " git integration for NERDTree
     Plug 'Xuyuanp/nerdtree-git-plugin'
+    " fuzzy finder
+    Plug 'ctrlpvim/ctrlp.vim'
+    " start-up screen
+    Plug 'mhinz/vim-startify'
 call plug#end()
 
 " ***** *****
 
 " PART F:
 "       Plugin configurations
+" ----------
+" CtrlP fuzzy finder
+" default path mode
+let g:ctrlp_working_path_mode = 'ra'
+" default mappings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 " ----------
 " vim-commantary
 " Coment out a line (default cc command not used!)
@@ -375,3 +392,49 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" ***** *****
+
+" PART G:
+"       custom actions
+" -----
+
+" 1: c/cpp make and run
+
+function BuildClean()
+  let out_name = expand("%:t:r")
+  exe '!make clean ' . out_name
+endfunction
+
+function BuildSource()
+  let out_name = expand("%:t:r")
+  exe '!make ' . out_name
+endfunction
+
+function RunCSource()
+  vsplit
+  let out_name = expand("%:t:r")
+  exe 'terminal ' . out_name
+endfunction
+
+function BuildRun()
+  vsplit
+  let build_name = expand("%:t:r")
+  let out_name = build_name
+  exe 'terminal ' . "make " . out_name . "& " . out_name
+endfunction
+
+autocmd FileType c nnoremap <Leader>bc :call BuildClean()<CR>
+autocmd FileType cpp nnoremap <Leader>bc :call BuildClean()<CR>
+
+autocmd FileType c nnoremap <Leader>bb :call BuildSource()<CR>
+autocmd FileType cpp nnoremap <Leader>bb :call BuildSource()<CR>
+
+autocmd FileType c nnoremap <Leader>rr :call RunCSource()<CR>
+autocmd FileType cpp nnoremap <Leader>rr :call RunCSource()<CR>
+
+autocmd FileType c nnoremap <Leader>br :call BuildRun()<CR>
+autocmd FileType cpp nnoremap <Leader>br :call BuildRun()<CR>
+
+autocmd FileType c nnoremap <Leader>mc :!make clean<CR>
+a

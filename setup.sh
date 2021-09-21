@@ -38,8 +38,9 @@ ln -s -f "${dotdir}/.nanorc" "${HOME}/.nanorc" && echo "added nanorc"
 ln -s -f "${dotdir}/.bashrc" "${HOME}/.bashrc" && echo "added bashrc"
 
 fonts_dir="${HOME}/.fonts"
-cp "${dotdir}/fonts/MesloLGS NF Bold.ttf" "${fonts_dir}"
-cp "${dotdir}/fonts/MesloLGS NF Italic.ttf" "${fonts_dir}"
-cp "${dotdir}/fonts/MesloLGS NF Regular.ttf" "${fonts_dir}"
+[ -d "${fonts_dir}" ] || mkdir "${fonts_dir}"
+cp "${dotdir}/fonts/MesloLGS NF Bold.ttf" "${fonts_dir}/MesloLGS NF Bold.ttf"
+cp "${dotdir}/fonts/MesloLGS NF Italic.ttf" "${fonts_dir}/MesloLGS NF Italic.ttf"
+cp "${dotdir}/fonts/MesloLGS NF Regular.ttf" "${fonts_dir}/MesloLGS NF Regular.ttf"
 
 exit 0

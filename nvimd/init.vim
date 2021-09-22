@@ -194,9 +194,9 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " ----------
-" vim-commantary
+" vim-commentary
 " Coment out a line (default cc command not used!)
- map <Leader>c gcc
+ map <Leader>o gcc
 
 " ----------
 " NERDTree

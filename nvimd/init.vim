@@ -92,7 +92,7 @@ set listchars=tab:>>     " Show tabs as >> in list mode
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 " Red color for long text fot text longet than 80 chars
-au BufWinEnter * let w:m2=matchadd('WarningMsg', '\%>80v.\+', -1)
+au BufWinEnter * let w:m2=matchadd('WarningMsg', '\%>120v.\+', -1)
 " select color scheme
 set background=dark
 colorscheme gruvbox
@@ -110,6 +110,10 @@ noremap <A-w> :update<CR>
 inoremap <A-w> <C-O>:update<CR>
 " force quit all
 noremap <Leader>qq :qa!<CR>
+" quit
+nnoremap <leader>q :q<CR>
+nnoremap <leader>qw :qw<CR>
+nnoremap <leader>qq :q!<CR>
 " vertical split
 noremap <A-e> :vsplit<CR>
 " horrizental split
@@ -261,6 +265,19 @@ let g:floaterm_keymap_prev   = '<A-C-k>'
 let g:floaterm_keymap_new    = '<A-C-o>'
 
 " ----------
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste', '%{virtualenv#statusline()' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'GitGutterGetHunkSummary'
+      \ },
+      \ }
+
+" ----------
 " Colorizer Plugin
 " Show Color on Color names and Color codes
 " example : red #125e36
@@ -268,6 +285,10 @@ noremap <Leader>sc :ColorToggle<CR>
 
 " ----------
 " coc plugin
+" extentions
+let g:coc_global_extensions = [ 'coc-json', 'coc-pyright', 'coc-clangd', 'coc-yaml',
+                              \ 'coc-markdownlint', 'coc-markdown-preview-enhanced',
+                              \ 'coc-sh', 'coc-webview']
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 " Always show the signcolumn, otherwise it would shift the text each time
@@ -437,4 +458,8 @@ autocmd FileType c nnoremap <Leader>br :call BuildRun()<CR>
 autocmd FileType cpp nnoremap <Leader>br :call BuildRun()<CR>
 
 autocmd FileType c nnoremap <Leader>mc :!make clean<CR>
-a
+
+" 2: preview md files with coc
+
+autocmd FileType markdown nnoremap <Leader>pr :CocCommand markdown-preview-enhanced.openPreview<CR>
+autocmd FileType markdown nnoremap <Leader>ur :CocCommand markdown-preview-enhanced.syncPreview<CR>
